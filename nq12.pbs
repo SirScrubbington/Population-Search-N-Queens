@@ -1,0 +1,14 @@
+#!/bin/bash
+#PBS -q batch
+#PBS -l nodes=1:ppn=12
+#PBS -l nodes=2:ppn=6
+#PBS -l nodes=3:ppn=4
+#PBS -l nodes=4:ppn=3
+#PBS -l nodes=6:ppn=2
+#PBS -l nodes=12:ppn=1
+#PBS -l walltime=200:00:00
+#PBS -N nq_12
+
+# int min_n,max_n,population_size,mutation_chance,repeats
+
+mpiexec -quiet -np 12 nq.out 4 128 24 50 2  5 > nq_12.txt

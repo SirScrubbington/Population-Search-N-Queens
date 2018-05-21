@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mpiCC nq.c -O4 -o nq.out
+
+qsub nq4.pbs
+qsub nq8.pbs
+qsub nq12.pbs
+qsub nq16.pbs
